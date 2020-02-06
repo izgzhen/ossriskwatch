@@ -13,7 +13,9 @@ We focus on the potential vulnerability that passes variable or high-privilege c
 ./package/docs/make-sections-docs.js:  execSync(typedocCommand);
 ```
 
-`@mindbox%frontend@0.46.64`
+~~`@mindbox%frontend@0.46.64`~~
+
+The commands are all `npm ***` constants. So it should be safe.
 
 ```
 ./package/build/version-bump.js:const execSync = require("child_process").execSync;
