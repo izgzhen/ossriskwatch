@@ -4,19 +4,39 @@ A list of new & interesting OSS code.
 
 ## npm
 
-[@instrument/storytime-react-scripts@3.0.0-storytime-1](https://www.npmjs.com/package/@instrument/storytime-react-scripts/v/3.0.0-storytime-1)
+We focus on the potential vulnerability that passes variable or high-privilege commands to `execSync` here.
+
+`wix-storybook-utils@3.0.59`
 
 ```
-./package/scripts/eject.js:const execSync = require('child_process').execSync;
-./package/scripts/eject.js:    let stdout = execSync(`git status --porcelain`, {
-./package/scripts/test.js:const execSync = require('child_process').execSync;
-./package/scripts/test.js:    execSync('git rev-parse --is-inside-work-tree', { stdio: 'ignore' });
-./package/scripts/test.js:    execSync('hg --cwd . root', { stdio: 'ignore' });
-./package/scripts/init.js:const execSync = require('child_process').execSync;
-./package/scripts/init.js:    execSync('git rev-parse --is-inside-work-tree', { stdio: 'ignore' });
-./package/scripts/init.js:    execSync('hg --cwd . root', { stdio: 'ignore' });
-./package/scripts/init.js:    execSync('git --version', { stdio: 'ignore' });
-./package/scripts/init.js:    execSync('git init', { stdio: 'ignore' });
-./package/scripts/init.js:    execSync('git add -A', { stdio: 'ignore' });
-./package/scripts/init.js:    execSync('git commit -m "Initial commit from Create React App"', {
+./package/docs/make-sections-docs.js:const { execSync } = require('child_process');
+./package/docs/make-sections-docs.js:  execSync(typedocCommand);
 ```
+
+`@mindbox%frontend@0.46.64`
+
+```
+./package/build/version-bump.js:const execSync = require("child_process").execSync;
+./package/build/version-bump.js:const exec = command => execSync(command, { encoding: "utf8" });
+```
+
+`storybook-chroma@3.5.0`
+
+```
+./package/bin/__tests__/serializers.test.js:import { execSync } from 'child_process';
+./package/bin/__tests__/serializers.test.js:    execSync('some hot garbage');
+./package/bin/git/git.js:import { execSync } from 'child_process';
+./package/bin/git/git.js:    return execSync(`${command} 2>&1`)
+```
+
+`vtex@2.87.2`
+
+```
+./package/lib/modules/utils.js:    child_process_es6_promise_1.execSync(command, { stdio: 'inherit', cwd: path_1.resolve(root, relativePath) });
+./package/lib/modules/setup/setupTooling.js:    child_process_1.execSync(`${utils_1.yarnPath} add -D ${depList}`, {
+./package/lib/modules/release/utils.js:        output = child_process_es6_promise_1.execSync(cmd, { stdio: hideOutput ? 'pipe' : 'inherit', cwd: root });
+./package/lib/modules/release/utils.js:        child_process_es6_promise_1.execSync('git --version');
+./package/lib/modules/release/utils.js:        child_process_es6_promise_1.execSync('git rev-parse --git-dir');
+```
+
+etc.
