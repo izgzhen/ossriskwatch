@@ -20,7 +20,9 @@ We focus on the potential vulnerability that passes variable or high-privilege c
 ./package/build/version-bump.js:const exec = command => execSync(command, { encoding: "utf8" });
 ```
 
-`storybook-chroma@3.5.0`
+~~`storybook-chroma@3.5.0`~~
+
+The commands are all `git ***` constants. So it should be safe.
 
 ```
 ./package/bin/__tests__/serializers.test.js:import { execSync } from 'child_process';
