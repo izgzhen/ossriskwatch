@@ -100,3 +100,12 @@ es.through = function () {
 
 >>>>>>> ../snob/node_modules/event-stream/index.js
 ```
+
+```
+results/hookagent@0.7.2-execSync.txt_dot/package/server.js.dot
+	"[const]su - -c env"->"[call][const]execSync" [type=DATAFLOW,];
+
+
+results/homebridge-config-ui-x@4.10.0-execSync.txt_dot/package/dist/self-check.js.dot
+	"[const]sudo -E -n npm rebuild node-pty-prebuilt-multiarch --unsafe-perm"->"[call][const]execSync" [type=DATAFLOW,];
+```
