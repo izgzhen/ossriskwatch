@@ -4,6 +4,8 @@ A list of new & interesting OSS code.
 
 ## npm
 
+Dashboard: http://157.245.246.72:3000/public/dashboard/52ac823f-61c1-46b0-aaf5-40815299b801
+
 ### Potential vulnerabilities
 
 e.g. passes variable or high-privilege commands to `execSync` here.
